@@ -1,0 +1,156 @@
+* {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.navbar-nav .btn-warning,
+.send .btn-warning {
+  background-color: #FC8047;
+  border-color: #FC8047;
+}
+
+.navbar-nav .btn-warning:hover,
+.send .btn-warning:hover {
+  background-color: #cc683a;
+  border-color: #cc683a;
+}
+
+.bg-jumbotron {
+  background: url("assets/Bg-Wave.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+}
+
+.bg-jumbotron .content-1, 
+.benefit,
+.mitra-type,
+.contact-text{
+  text-align: center;
+}
+
+.bg-jumbotron .content-1 h1,
+.benefit h1,
+.mitra-type h1,
+.contact-text h1{
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.benefit img {
+  width: 30%;
+}
+
+.contact-form .left-input input,
+.contact-form .left-input select,
+.contact-form .right-input input,
+.contact-form .right-input select {
+  display: block;
+  width: 100%;
+}
+
+/* JS Style */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  transition: 0.3s;
+}
+
+.navbar-shdw {
+  box-shadow: 0px 0px 3px  #666;
+}
+
+
+@media (min-width: 768px) { 
+
+  .benefit img {
+    width: 40%;
+  }
+  
+  .mitra-type .card {
+  height: 250px;
+  }
+
+ }
+
+@media (min-width: 996px) {
+ .navbar-nav .daftar {
+   margin-left: 25px;
+   padding: 7px 20px !important;
+   border-radius: 20px; 
+  }
+
+  .bg-benefit {
+    background: url("assets/Vector\ 12.png") no-repeat left ;
+    background-size: contain;
+    background-position-y: -10px;
+    height: 500px;
+  }
+
+  .benefit .scope-bot {
+    position: relative;
+    top: 105px;
+  }
+
+  .benefit .scope-top {
+    position: relative;
+    top: 20px;
+  }
+
+  .scope-bot,
+  .scope-top {
+    text-align: center;
+  }
+
+  .scope-bot span,
+  .scope-top span {
+    font-weight: bold;
+  }
+
+  .scope-bot .text-clr {
+    color: #FC8047;
+  }
+
+  .mitra-type .card {
+    height: 350px;
+  }
+
+  .bg-jumbotron img {
+    width: 100%;
+    margin-left: -100px;
+  }
+
+  .bg-jumbotron {
+    height: 520px;
+  }
+
+  .banner-content img {
+    width: 130%;
+  }
+  
+  .bg-jumbotron .content-1 h1 {
+    font-weight: 800;
+    font-size: 64px;
+  }
+
+  .bg-jumbotron .content-1 {
+    text-align: left;
+    padding: 0 20px ;
+  }
+
+  .bg-jumbotron .content-1 p {
+    font-size: 25px;
+  }
+
+  .contact-form .send .btn {
+    color: white;
+    margin: auto;
+    padding: 7px 30px !important;
+    border-radius: 20px; 
+  }
+}
