@@ -1,6 +1,9 @@
 * {
   font-family: 'Nunito Sans', sans-serif;
 }
+.text-clr {
+  color: #FC8047;
+}
 
 .navbar-nav {
   text-align: center;
@@ -92,27 +95,27 @@
     height: 500px;
   }
 
-  .benefit .scope-bot {
+  .benefit .scope-2 {
     position: relative;
     top: 105px;
   }
 
-  .benefit .scope-top {
+  .benefit .scope-1 {
     position: relative;
     top: 20px;
   }
 
-  .scope-bot,
-  .scope-top {
+  .scope-2,
+  .scope-1 {
     text-align: center;
   }
 
-  .scope-bot span,
-  .scope-top span {
+  .scope-2 span,
+  .scope-1 span {
     font-weight: bold;
   }
 
-  .scope-bot .text-clr {
+  .scope-2 .text-clr {
     color: #FC8047;
   }
 

@@ -69,26 +69,58 @@ var mahasiswa = [
   }
 ];
 
+var benefitMitra = [
+  {
+    "icon": "assets/jejaring.png",
+    "head": "Jejaring Bisnis",
+    "prgrf": "Kesempatan untuk menjangkau <span class='text-clr'>865</span> pengguna kami"
+  },
+  {
+    "icon": "assets/insentif.png",
+    "head": "Insentif",
+    "prgrf": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut pellentesque elit tellus feugiat malesuada faucibus"
+  },
+  {
+    "icon": "assets/pengalaman.png",
+    "head": "Pengalaman",
+    "prgrf": "Berbagi cerita, motivasi, dan pengalaman menarik dengan menjadi pembicara pada LatihID Talks maupun PETA"
+  },
+  {
+    "icon": "assets/sertifikat.png",
+    "head": "Sertifikat",
+    "prgrf": "Dokumentasi sebagai pembicara dalam acara LatihID"
+  },
+];
+
+var typeMitra = [
+  {
+    "icon": "assets/ikon1.png",
+    "head": "Pemateri Modul",
+    "prgrf": "Individu/Lembaga bermitra sebagai instruktur atau pemateri di latihID Modul, dengan menyediakan beberapa courses di dalam satu modul pembelajaran."
+  },
+  {
+    "icon": "assets/ikon2.png",
+    "head": "Pembicara Talks",
+    "prgrf": "Individu/Lembaga bermitra sebagai instruktur atau pemateri di latihID Talks, yang membahas topik seputar UMKM melalui webinar live atau tatap muka yang interaktif."
+  },
+  {
+    "icon": "assets/ikon3.png",
+    "head": "Pembicara PETA",
+    "prgrf": "Individu/Lembaga bermitra sebagai instruktur atau pemateri di latihID PETA, yang menceritakan pengalaman tentang UMKM dalam video singkat."
+  },
+  {
+    "icon": "assets/ikon4.png",
+    "head": "Mitra Lainnya",
+    "prgrf": "Individu/Lembaga dapat mengajukan berbagai jenis kemitraan lainnya, seperti Media partner."
+  },
+];
 
 
-// for (x in mahasiswa) {
-//   var text = "";
-//   text += mahasiswa[x].nama + "\n";
-// }
-
-// for (var i = 0; i < mahasiswa.length; i++) {
-//   var text = "";
-//   text += mahasiswa[i].nama + "\n";
-// }
-
-// mahasiswa.forEach(function (e, i) {
-//   var text = "";
-//   text += e.nama + "\n";
-// })
-// var namaMahasiswa = mahasiswa.map(val => val.nama);
 
 
-// Fungsi Looping dengan For
+
+
+//Looping of the function using For
 function forFunc() {
   var text = "";
   for (var i = 0; i < mahasiswa.length; i++) {
@@ -97,7 +129,7 @@ function forFunc() {
   }
 };
 
-//Fungsi Looping dengan forEach
+//Looping of the function using forEach
 function fEachFunc() {
   var text = "";
   mahasiswa.forEach(function (e) {
@@ -106,14 +138,37 @@ function fEachFunc() {
   })
 };
 
-//Fungsi Looping dengan map
+//Looping of the function using map
 function mapFunc() {
   var dataMhs = mahasiswa.map(val => val.email);
   console.log(dataMhs.join("\n"));
 };
 
 
-// self invok Function
+
+
+function callMitra() {
+  const mitraBenefit = document.querySelector(".mitra-benefit");
+  var txt = '';
+  var ar = [2, 1, 2, 1];
+  benefitMitra.map(function (e, i) {
+    txt += '<div data-aos="fade-up" data-aos-duration="1500" class="col-md-6 col-lg-3"><div class="scope-' + ar[i] + '"><div class="icon"><img src="' + e.icon + '" alt=""></div><span>' + e.head + '</span><p>' + e.prgrf + '</p></div></div>';
+  });
+  mitraBenefit.innerHTML = txt;
+}
+
+function callTypeMitra() {
+  const mitraType = document.querySelector(".mitra-type-row");
+  var txt = '';
+  typeMitra.map(function (e) {
+    txt += '<div class="col-md-6 col-lg-3 text-center mt-4"><div class="card"><div class="card-body"><img src="' + e.icon + '" alt=""><h5 class="card-title mt-4">' + e.head + '</h5><p class="card-text">' + e.prgrf + '</p></div></div></div>';
+  });
+  mitraType.innerHTML = txt;
+}
+
+
+//self invok function
 (function () {
-  fEachFunc();
+  callMitra();
+  callTypeMitra();
 })();
